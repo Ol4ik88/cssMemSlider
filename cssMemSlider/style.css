@@ -1,0 +1,71 @@
+body{
+  background-color: black;
+}
+.wrapper {
+  padding: 1rem;
+  max-width:70vw;
+  margin: 0 auto;
+  background-color: black;
+}
+.container {
+ overflow: hidden;
+}
+.slider {
+ display: flex;
+ width: 100%;
+ transition: all 0.5s;
+}
+img{
+  width: 100%;
+  flex-shrink:0;
+}
+.sub{
+  display: flex;
+  color:rgb(211, 173, 47);
+}
+
+
+.navigation {
+  display: flex;
+  justify-content: flex-end;
+  cursor: pointer;
+  min-width: 10rem;
+  padding: 1rem 0;
+}
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+input {
+ display: none;
+}
+
+.batton span{
+  position: relative; 
+  display: inline-block; 
+  width: 1rem; height: 1rem; 
+  background-color:blue;
+  border-radius: 50%; 
+  transition: all 0.3s ease-in-out;
+ }
+.batton {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  cursor: pointer;
+}
+.batton:hover span{
+  background-color: gold;
+}
+.batton:active span{
+  background-color:rgb(116, 179, 149);
+}
+  #rbt1:checked ~.footer .navigation label[for="rbt1"] span,
+  #rbt2:checked ~.footer .navigation label[for="rbt2"] span,
+  #rbt3:checked ~.footer .navigation label[for="rbt3"] span,
+  #rbt4:checked ~.footer .navigation label[for="rbt4"] span {
+    background-color: aliceblue;
+  }
+  
+ 
