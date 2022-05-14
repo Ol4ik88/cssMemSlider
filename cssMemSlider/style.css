@@ -24,7 +24,6 @@ img{
   color:rgb(211, 173, 47);
 }
 .subtitle-1,.subtitle-2,.subtitle-3,.subtitle-4{
-  opacity: 0;
   font-size: 0;
   transition: all 0.5s;
 }
@@ -46,7 +45,6 @@ img{
 #rbt3:checked~.footer .sub .subtitle-3,
 #rbt4:checked~.footer .sub .subtitle-4 
  {
-  opacity: 1;
   font-size: 1rem;
 }
 
@@ -68,7 +66,6 @@ input {
 }
 
 .batton span{
-  position: relative; 
   display: inline-block; 
   width: 1rem; height: 1rem; 
   background-color:blue;
@@ -108,6 +105,13 @@ input {
     }
     h3 {
       margin: 0;
+    }
+    .batton span {
+      width: 1.5rem; height: 1.5rem; 
+    }
+    .batton {
+      padding-left: 1rem;
+      padding-right: 1rem;
     }
   }
   @media screen and (max-width: 768px)and (orientation: landscape){
