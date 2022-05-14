@@ -51,7 +51,6 @@ img{
 .navigation {
   display: flex;
   justify-content: flex-end;
-  cursor: pointer;
   min-width: 10rem;
   padding: 1rem 0;
 }
@@ -112,6 +111,7 @@ input {
     .batton {
       padding-left: 1rem;
       padding-right: 1rem;
+      cursor: none;
     }
   }
   @media screen and (max-width: 768px)and (orientation: landscape){
