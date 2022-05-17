@@ -1,0 +1,151 @@
+*{
+  box-sizing: border-box;
+}
+body{
+  margin-left: 0;
+  margin-right: 0;
+  width: 100vw;
+  height: 100vh;
+  background: url('./assets/icons/2.jpeg') center/100% 100% no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.wrapper {
+  
+  padding: 1rem;
+  max-width:50vw;
+  margin: 0 auto;
+  background-color: rgba(37, 138, 185, 0.3);
+  border: 0.2rem solid rgba(47, 186, 221, 0.438);
+  border-radius: 1rem;
+}
+.container {
+ overflow: hidden;
+}
+.slider {
+ display: flex;
+ width: 100%;
+ 
+ transition: all 0.5s;
+
+}
+img{
+  width: 100%;
+  flex-shrink:0;
+  border: 0.2rem solid rgba(255, 255, 255, 0.76);
+  border-radius: 1rem;
+}
+.sub{
+  display: flex;
+  color:rgb(109, 224, 219);
+}
+.subtitle-1,.subtitle-2,.subtitle-3,.subtitle-4{
+  font-size: 0;
+  transition: all 0.5s;
+}
+#rbt1:checked~.container .slider {
+  transform: translate(0);
+}
+#rbt2:checked~.container .slider {
+  transform: translateX(-100%);
+}
+#rbt3:checked~.container .slider {
+  transform: translateX(-200%);
+}
+#rbt4:checked~.container .slider {
+  transform: translateX(-300%);
+}
+
+#rbt1:checked~.footer .sub .subtitle-1,
+#rbt2:checked~.footer .sub .subtitle-2,
+#rbt3:checked~.footer .sub .subtitle-3,
+#rbt4:checked~.footer .sub .subtitle-4 
+ {
+  font-size: 1rem;
+}
+
+.navigation {
+  display: flex;
+  justify-content: flex-end;
+  min-width: 10rem;
+  padding: 1rem 0;
+}
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+input {
+ display: none;
+}
+
+.batton span{
+  display: inline-block; 
+  width: 1rem; height: 1rem; 
+  background-color:rgb(118, 227, 247);
+  border-radius: 50%; 
+  transition: all 0.3s ease-in-out;
+ }
+.batton {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  cursor: pointer;
+}
+.batton:hover span{
+  background-color: rgb(0, 255, 106);
+}
+.batton:active span{
+  background-color:rgb(210, 233, 10);
+}
+  #rbt1:checked ~.footer .navigation label[for="rbt1"] span,
+  #rbt2:checked ~.footer .navigation label[for="rbt2"] span,
+  #rbt3:checked ~.footer .navigation label[for="rbt3"] span,
+  #rbt4:checked ~.footer .navigation label[for="rbt4"] span {
+    background-color: aliceblue;
+  }
+  
+  @media screen and (max-width: 575px){
+    .footer {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+
+    .navigation {
+      justify-content: center;
+      padding: 5vh 0;
+    }
+    .wrapper {
+      max-width: 90vw;
+    }
+    h3 {
+      margin: 0;
+    }
+    .batton span {
+      width: 2rem; height: 2rem; 
+    }
+    .batton {
+      padding-left: 1rem;
+      padding-right: 1rem;
+      cursor: none;
+    }
+  }
+  @media screen and (max-width: 768px)and (orientation: landscape){
+    .footer {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+
+    .navigation {
+      justify-content: center;
+    }
+    .wrapper {
+      max-width: 70vw;
+      padding: 0;
+    }
+    
+    h3 {
+      margin: 0;
+    }
+  }
